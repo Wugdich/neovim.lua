@@ -2,10 +2,10 @@ local lsp = require('lsp-zero')
 lsp.preset('recommended')
 
 lsp.ensure_installed({
-	'eslint',
-	'tsserver',
+	--'eslint',
+	--'tsserver',
 	'pyright',
-    'gopls'
+    --'gopls'
 })
 
 
@@ -35,7 +35,7 @@ lsp.set_preferences({
         warn = 'W',
         hint = 'H',
         info = 'I'
-    }
+    },
 })
 
 lsp.set_preferences({

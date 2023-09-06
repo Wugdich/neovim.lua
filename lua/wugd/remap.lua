@@ -19,6 +19,9 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+-- Go back from definition
+vim.keymap.set("n", "gb", "<C-o>")
+
 -- Clip to system
 vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>y", "\"+y")
@@ -35,3 +38,8 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 -- Allows replace word under the cursor in the enitre file
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- Add double quote around the world under the cursor
+vim.keymap.set("n", "<leader>q\"", "ciw\"\"<Esc>P")
+-- or single quote
+vim.keymap.set("n", "<leader>q\'", "ciw\'\'<Esc>P")
