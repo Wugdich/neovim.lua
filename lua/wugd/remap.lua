@@ -43,3 +43,7 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "<leader>q\"", "ciw\"\"<Esc>P")
 -- or single quote
 vim.keymap.set("n", "<leader>q\'", "ciw\'\'<Esc>P")
+
+-- Comment (uncomment) highlighted lines on python
+vim.keymap.set("v", "#", ":s/^/#/<cr>:noh<cr>")
+vim.keymap.set("v", "-#", ":s/^#//<cr>:noh<cr>")
